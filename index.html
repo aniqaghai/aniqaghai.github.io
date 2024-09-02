@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anika Ghai's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #f8f9fa, #e9ecef);
+            color: #333;
+            box-sizing: border-box;
+        }
+
+        header {
+            background: #343a40;
+            color: #fff;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #ced4da;
+        }
+
+        section {
+            padding: 3rem 1rem; /* Reduced from 6rem to 3rem */
+            min-height: auto; /* Changed from 100vh to auto */
+        }
+
+        .intro {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: url('your-background-image.jpg') no-repeat center center/cover;
+            color: #fff;
+            /* Removed the box-shadow property that was creating the overlay */
+            min-height: 40vh;
+            display: flex;
+            flex-direction: column; /* Changed from default to column */
+            align-items: center;
+            justify-content: center;
+        }
+
+        .intro h1 {
+            margin: 0 0 0.5rem; /* Added bottom margin */
+            font-size: 3rem;
+            font-weight: 700;
+            color: #333; /* Changed to a dark gray color */
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Added white text shadow for better contrast */
+        }
+
+        .intro p {
+            font-size: 1.2rem;
+            color: #444; /* Changed to a dark gray color */
+            margin-top: 0.5rem;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5); /* Added white text shadow for better contrast */
+        }
+
+        .content {
+            max-width: 800px; /* Reduced from 1000px */
+            margin: 0 auto;
+            text-align: center; /* Changed from left to justify */
+            padding: 0 1rem; /* Added horizontal padding */
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #343a40;
+            font-weight: 600;
+            text-align: center; /* Added this line to center-align headings */
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #495057;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .card {
+            background: #fff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin: 1rem;
+            flex: 1 1 45%;
+            max-width: 45%;
+            text-align: center; /* Changed from left to center */
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            font-size: 1.8rem;
+            color: #343a40;
+            margin-bottom: 1rem; /* Added margin-bottom for spacing */
+        }
+
+        .card p {
+            font-size: 1.1rem;
+            color: #6c757d;
+            margin-top: 0.5rem;
+            line-height: 1.6;
+            text-align: left; /* Keep paragraph text left-aligned */
+        }
+
+        .learn-more-btn {
+            display: inline-block;
+            padding: 0.7rem 1.5rem;
+            background-color: #343a40;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+        }
+
+        .learn-more-btn:hover {
+            background-color: #495057;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+            margin-top: 2rem;
+        }
+
+        input,
+        textarea {
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        button {
+            padding: 0.8rem;
+            border: none;
+            background: #343a40;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #495057;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: #343a40;
+            color: #fff;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="intro">
+        <h1>Anika Ghai</h1>
+        <p>A student with a deep passion for both the arts and sciences</p>
+    </section>
+
+    <section id="about">
+        <div class="content">
+            <h2>About Me</h2>
+            <p>Hello, I'm Anika Ghai, a high school student with a deep passion for both the arts and sciences. Based in the vibrant city of Lucknow, I am currently pursuing my studies in Mathematics, Physics, and Design and Technology.</p>
+            <p>These subjects not only challenge my analytical skills but also align perfectly with my lifelong passion for architecture. I believe that understanding the principles of design and the mechanics of structures will provide a strong foundation for my future in the field of architecture.</p>
+            <p>My goal is to create innovative and sustainable architectural designs that blend functionality with aesthetic beauty, contributing to the development of smarter, more efficient living spaces.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="content">
+            <h2>Projects</h2>
+            <div class="project-cards">
+                <div class="card">
+                    <h3>Rhythmic Foudations</h3>
+                    <p>This project explores the connection between classical dance and architecture, analyzing mudras (hand gestures) used in ancient Indian architecture and their significance.</p>
+                    <a href="mudras.html" class="learn-more-btn">Learn More</a>
+                </div>
+                <div class="card">
+                    <h3>Historical Monuments of Lucknow</h3>
+                    <p>This project delves into the evolution of architectural design, examining how cultural influences have shaped modern architecture.</p>
+                    <a href="project2.html" class="learn-more-btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="content">
+            <h2>Contact</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Anika Ghai. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
